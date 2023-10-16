@@ -9,7 +9,7 @@ type State = {
 // for instance say you have an object data
 const data: State = { content: "Some Text" };
 // this is good the object fits the type
-const otherData: State = { wrong: "testThings ", number: 122 };
+// const otherData: State = { wrong: "testThings ", number: 122 };
 // this is also good because now we know that otherData is fucked
 // and des not look like what we said it shoud look like
 const yetAnotherCorrect = { content: "YAYYY" };
@@ -19,7 +19,7 @@ const yetAnotherCorrect = { content: "YAYYY" };
 // console can have as many aguments as you want
 // you can also pass it straight objects, as in the example below
 // in the console you will have each of the data, other data as keys with the value of the objets set above
-console.log("WAT -", { data, otherData, yetAnotherCorrect });
+console.log("WAT -", { data, yetAnotherCorrect });
 
 //Functional components are just functions
 // this is the "cool" anonymous functuon way

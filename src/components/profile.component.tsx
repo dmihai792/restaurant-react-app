@@ -24,7 +24,12 @@ export default class Profile extends Component<Props, State> {
   componentDidMount() {
     const currentUser = AuthService.getCurrentUser();
 
-    if (!currentUser) this.setState({ redirect: "/home" });
+    if (window.location.search.includes("refresh") && !localStorage.refreshed) {
+      localStorage.refreshed = "done";
+      window.location.reload();
+    } 
+
+      if (!currentUser) this.setState({ redirect: "/home" });
     this.setState({ currentUser: currentUser, userReady: true })
   }
 

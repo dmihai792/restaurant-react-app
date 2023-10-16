@@ -35,7 +35,8 @@ const Login = () => {
     AuthService.login(username, password)
       .then(() => {
         // On success, navigate to profile
-        navigate("/profile");
+        navigate("/profile?refresh=true");
+      
       })
       .catch((error) => {
         const resMessage =

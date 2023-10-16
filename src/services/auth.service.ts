@@ -20,6 +20,7 @@ class AuthService {
 
   logout() {
     localStorage.removeItem("user");
+    localStorage.removeItem("refreshed");
   }
 
   register(username: string, email: string, password: string) {
